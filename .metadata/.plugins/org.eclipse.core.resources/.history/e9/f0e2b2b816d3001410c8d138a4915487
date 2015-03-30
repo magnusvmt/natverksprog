@@ -1,0 +1,54 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		if(args.length < 1){
+			System.out.println("input URL as argument");
+			System.exit(1);
+		}
+		String HTMLPage = "";
+		try {
+			URL page = new URL(args[0]);
+			BufferedReader in = new BufferedReader(new InputStreamReader(page.openStream()));
+			StringBuilder sb = new StringBuilder();
+			String line;
+			while ((line = in.readLine()) != null)
+	            sb.append(line);
+	        in.close();
+	        HTMLPage = sb.toString();
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		//Varför använda regex till detta? Finns bättre sätt, blir bara klyddigt.
+		//Pattern linkPattern = Pattern.compile("\\s*(?i)href\\s*=\\s*(\"([^\"]*\")|'[^']*'|([^'\">\\s]+))", Pattern.CASE_INSENSITIVE|Pattern.DOTALL);
+		//Pattern linkPattern = Pattern.compile("(<a[^>]+>.+?</a>)",  Pattern.CASE_INSENSITIVE|Pattern.DOTALL);
+		Pattern linkPattern = Pattern.compile("<a[^>]+href=[\"']?([\"'>]+)[\"']?[^>]*>(.+?)</a>",  Pattern.CASE_INSENSITIVE|Pattern.DOTALL);
+
+
+		Matcher pageMatcher = linkPattern.matcher(HTMLPage);
+		ArrayList<String> links = new ArrayList<String>();
+		while(pageMatcher.find()){
+			String link = pageMatcher.group();
+		    links.add(link.substring(0,link.length()-1));
+		}
+		
+		for(String s : links){
+			System.out.println(s);
+		}
+	}
+
+}
