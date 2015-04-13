@@ -1,0 +1,13 @@
+import java.net.ServerSocket;
+
+
+public class EchoTCP1 {
+int port = 30000;
+ServerSocket ss;
+
+public EchoTCP1(){
+	ss = new ServerSocket(port);
+}
+
+
+}

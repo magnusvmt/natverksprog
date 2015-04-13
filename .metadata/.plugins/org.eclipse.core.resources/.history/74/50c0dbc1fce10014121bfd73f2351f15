@@ -1,0 +1,19 @@
+
+public class threadExperiment extends Thread{
+
+
+	public static void main(String[] args) {
+		for(int i=0; i<10; i++){
+			threadExperiment t = new threadExperiment();
+			t.start();
+		}
+		
+	}
+	
+	public void run(){
+		for(int i=0; i<5; i++){
+			System.out.println(this.getName());
+		}
+	}
+
+}

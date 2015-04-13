@@ -1,0 +1,17 @@
+
+public class InfinitePrinter extends Thread{
+Mailbox mb;
+public InfinitePrinter(Mailbox mb){
+	this.mb = mb;
+}
+
+public void run(){
+	while(true){
+		String name = mb.remove();
+		if(name != null){
+			System.out.println(name);
+		}
+	}
+}
+
+}

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="30" version="2.0">
+<workbench progressCount="33" version="2.0">
 <workbenchAdvisor/>
-<window height="898" maximized="true" width="1675" x="139" y="112">
+<window height="1017" maximized="true" width="1675" x="288" y="45">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -33,13 +33,18 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
+<part id="1"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" partName="Main.java" path="I:/!!!Skola/eda095/lab1/src/Main.java" title="Main.java" tooltip="lab1/src/Main.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab1/src/Main.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="270" selectionTopPixel="618"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" partName="Main.java" path="I:/!!!Skola/eda095/lab2/src/Main.java" title="Main.java" tooltip="lab2/src/Main.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab2/src/Main.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="818" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DownloadController.java" partName="DownloadController.java" path="I:/!!!Skola/eda095/lab2/src/DownloadController.java" title="DownloadController.java" tooltip="lab2/src/DownloadController.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab2/src/DownloadController.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1507" selectionTopPixel="252"/>
 </editor>
 </editors>
 <views>
@@ -75,11 +80,6 @@
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Errors"/>
-<category IMemento.internal.id="Errors (2 items)"/>
-<category IMemento.internal.id="Warnings"/>
-</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="548"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -178,8 +178,8 @@
 <perspective_action id="com.android.ide.eclipse.ddms.Perspective"/>
 <perspective_action id="com.android.ide.eclipse.hierarchyviewer.PixelPerfectPespective"/>
 <perspective_action id="com.android.ide.eclipse.hierarchyviewer.TreeViewPerspective"/>
-<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
 <view id="org.eclipse.jdt.ui.PackageExplorer"/>
 <view id="org.eclipse.ui.views.ProblemView"/>
 <view id="org.eclipse.jdt.ui.JavadocView"/>
@@ -256,43 +256,164 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/lab1/src/Main.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/lab2/src/Main.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/lab2/src/RunnerOne.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/lab2/src/RunnerTwo.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/lab2/src/DownloadController.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/lab2/src/RunnerThree.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/lab2/src/RunnerRunnable.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/lab2/src/RunnerFour.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/lab2/src/RunnerFive.java"/>
 </editors>
-<item historyLabel="Main.java" index="0">
-<position info="not_deleted" x="340" y="0"/>
+<item historyLabel="RunnerTwo.java" index="2">
+<position/>
+</item>
+<item historyLabel="RunnerOne.java" index="1">
+<position info="not_deleted" x="293" y="74"/>
 </item>
 <item historyLabel="Main.java" index="0">
+<position info="not_deleted" x="675" y="0"/>
+</item>
+<item historyLabel="Main.java" index="0">
+<position info="not_deleted" x="273" y="0"/>
+</item>
+<item historyLabel="Main.java" index="0">
+<position info="not_deleted" x="641" y="36"/>
+</item>
+<item historyLabel="Main.java" index="0">
+<position info="not_deleted" x="273" y="0"/>
+</item>
+<item historyLabel="Main.java" index="0">
+<position info="not_deleted" x="426" y="39"/>
+</item>
+<item historyLabel="RunnerOne.java" index="1">
+<position info="not_deleted" x="293" y="74"/>
+</item>
+<item historyLabel="DownloadController.java" index="3">
+<position info="not_deleted" x="1507" y="0"/>
+</item>
+<item historyLabel="RunnerTwo.java" index="2">
 <position/>
 </item>
 <item historyLabel="Main.java" index="0">
-<position info="not_deleted" x="567" y="0"/>
+<position info="not_deleted" x="273" y="0"/>
+</item>
+<item historyLabel="RunnerTwo.java" index="2">
+<position/>
+</item>
+<item historyLabel="RunnerOne.java" index="1">
+<position info="not_deleted" x="293" y="74"/>
 </item>
 <item historyLabel="Main.java" index="0">
-<position info="not_deleted" x="1318" y="0"/>
+<position info="not_deleted" x="273" y="0"/>
+</item>
+<item historyLabel="RunnerOne.java" index="1">
+<position info="not_deleted" x="293" y="74"/>
 </item>
 <item historyLabel="Main.java" index="0">
-<position info="not_deleted" x="1405" y="0"/>
+<position info="not_deleted" x="273" y="0"/>
 </item>
-<item historyLabel="Main.java" index="0">
-<position info="not_deleted" x="2407" y="0"/>
+<item historyLabel="RunnerOne.java" index="1">
+<position info="not_deleted" x="471" y="0"/>
 </item>
-<item historyLabel="Main.java" index="0">
+<item historyLabel="RunnerTwo.java" index="2">
+<position/>
+</item>
+<item historyLabel="RunnerTwo.java" index="2">
 <position/>
 </item>
 <item historyLabel="Main.java" index="0">
-<position info="not_deleted" x="1848" y="0"/>
+<position info="not_deleted" x="273" y="0"/>
+</item>
+<item historyLabel="RunnerThree.java" index="4">
+<position info="not_deleted" x="1163" y="0"/>
+</item>
+<item historyLabel="RunnerOne.java" index="1">
+<position info="not_deleted" x="471" y="0"/>
+</item>
+<item historyLabel="RunnerRunnable.java" index="5">
+<position info="not_deleted" x="799" y="0"/>
+</item>
+<item historyLabel="RunnerRunnable.java" index="5">
+<position info="not_deleted" x="809" y="0"/>
+</item>
+<item historyLabel="RunnerTwo.java" index="2">
+<position/>
+</item>
+<item historyLabel="RunnerTwo.java" index="2">
+<position/>
+</item>
+<item historyLabel="RunnerOne.java" index="1">
+<position info="not_deleted" x="763" y="0"/>
+</item>
+<item historyLabel="RunnerThree.java" index="4">
+<position info="not_deleted" x="1163" y="0"/>
+</item>
+<item historyLabel="RunnerTwo.java" index="2">
+<position info="not_deleted" x="0" y="1145"/>
+</item>
+<item historyLabel="RunnerThree.java" index="4">
+<position info="not_deleted" x="177" y="0"/>
+</item>
+<item historyLabel="RunnerFour.java" index="6">
+<position info="not_deleted" x="1166" y="0"/>
+</item>
+<item historyLabel="RunnerThree.java" index="4">
+<position info="not_deleted" x="0" y="1163"/>
+</item>
+<item historyLabel="RunnerFour.java" index="6">
+<position info="not_deleted" x="181" y="0"/>
+</item>
+<item historyLabel="RunnerThree.java" index="4">
+<position info="not_deleted" x="203" y="0"/>
+</item>
+<item historyLabel="DownloadController.java" index="3">
+<position info="not_deleted" x="1507" y="0"/>
+</item>
+<item historyLabel="RunnerOne.java" index="1">
+<position info="not_deleted" x="763" y="0"/>
+</item>
+<item historyLabel="RunnerThree.java" index="4">
+<position info="not_deleted" x="1144" y="0"/>
 </item>
 <item historyLabel="Main.java" index="0">
-<position info="not_deleted" x="1741" y="0"/>
+<position info="not_deleted" x="759" y="8"/>
+</item>
+<item historyLabel="RunnerThree.java" index="4">
+<position info="not_deleted" x="1144" y="0"/>
 </item>
 <item historyLabel="Main.java" index="0">
-<position info="not_deleted" x="1763" y="0"/>
+<position info="not_deleted" x="759" y="8"/>
 </item>
 <item historyLabel="Main.java" index="0">
-<position info="not_deleted" x="1636" y="0"/>
+<position info="not_deleted" x="1150" y="0"/>
+</item>
+<item historyLabel="RunnerFour.java" index="6">
+<position info="not_deleted" x="181" y="0"/>
+</item>
+<item historyLabel="Main.java" index="0">
+<position info="not_deleted" x="273" y="0"/>
+</item>
+<item historyLabel="RunnerFour.java" index="6">
+<position info="not_deleted" x="181" y="0"/>
+</item>
+<item historyLabel="Main.java" index="0">
+<position info="not_deleted" x="1081" y="0"/>
+</item>
+<item historyLabel="RunnerFour.java" index="6">
+<position info="not_deleted" x="0" y="1166"/>
+</item>
+<item historyLabel="RunnerFive.java" index="7">
+<position info="not_deleted" x="229" y="0"/>
+</item>
+<item historyLabel="RunnerFour.java" index="6">
+<position info="not_deleted" x="0" y="1166"/>
+</item>
+<item historyLabel="RunnerFive.java" index="7">
+<position info="not_deleted" x="229" y="0"/>
 </item>
 <item active="true" historyLabel="Main.java" index="0">
-<position info="not_deleted" x="1823" y="0"/>
+<position info="not_deleted" x="1081" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -312,6 +433,27 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RunnerFive.java" tooltip="lab2/src/RunnerFive.java">
+<persistable path="/lab2/src/RunnerFive.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RunnerFour.java" tooltip="lab2/src/RunnerFour.java">
+<persistable path="/lab2/src/RunnerFour.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RunnerTwo.java" tooltip="lab2/src/RunnerTwo.java">
+<persistable path="/lab2/src/RunnerTwo.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RunnerThree.java" tooltip="lab2/src/RunnerThree.java">
+<persistable path="/lab2/src/RunnerThree.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DownloadController.java" tooltip="lab2/src/DownloadController.java">
+<persistable path="/lab2/src/DownloadController.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Runner.java" tooltip="lab2/src/Runner.java">
+<persistable path="/lab2/src/Runner.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" tooltip="lab2/src/Main.java">
+<persistable path="/lab2/src/Main.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" tooltip="lab1/src/Main.java">
 <persistable path="/lab1/src/Main.java"/>
 </file>

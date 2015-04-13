@@ -1,0 +1,22 @@
+import java.util.ArrayList;
+
+
+public class Mailbox {
+ArrayList<String> box;
+public Mailbox(){
+	box = new ArrayList<String>();
+}
+
+public synchronized void add(String s){
+	box.add(s);
+}
+public synchronized String remove(){
+	try {
+		box.remove(0);
+	}
+	catch(IndexOutOfBoundsException e){
+		return null;
+	}
+}
+
+}

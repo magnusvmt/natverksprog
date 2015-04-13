@@ -1,0 +1,53 @@
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		int port = 30000;
+
+		InputStream is = null;
+		OutputStream os = null;
+		try {
+			ServerSocket ss = new ServerSocket(port);
+			accept(ss);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	public static void accept(ServerSocket ss){
+	while(true){
+		Socket socket = null;
+		try {
+			socket = ss.accept();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			System.out.println("New connection from "+socket.getInetAddress().getHostName()+":"+socket.getPort()+". Local port: "+socket.getLocalPort());
+			InputStream is = socket.getInputStream();
+			OutputStream os = socket.getOutputStream();
+			int ch = is.read();
+			while(ch!=-1){
+			    os.write((char) ch);
+			    ch = is.read();
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	}
+}

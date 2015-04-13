@@ -1,0 +1,21 @@
+import java.net.Socket;
+
+
+public class ConnectedClient {
+String name;
+Socket clientSocket;
+
+public ConnectedClient(Socket socket){
+	clientSocket = socket;
+	int hash = socket.hashCode();
+	name = Integer.toString(hash);
+}
+
+public String getName(){
+	return name;
+}
+
+public Socket getSocket(){
+	return clientSocket;
+}
+}

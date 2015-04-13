@@ -1,0 +1,36 @@
+import java.util.ArrayList;
+
+
+public class Mailbox {
+ArrayList<String> box;
+boolean hasData = false;
+public Mailbox(){
+	box = new ArrayList<String>();
+}
+
+public synchronized void add(String s){
+	if(hasData){
+		try {
+			wait();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+	box.add(s);
+	hasData=true;
+	notifyAll();
+}
+public synchronized String remove(){
+	if(!hasData){
+		try {
+			wait();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+	hasData=false;
+	notifyAll();
+	return box.remove(0);
+}
+
+}

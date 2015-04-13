@@ -1,0 +1,77 @@
+import java.io.*;
+import java.net.*;
+import java.util.Scanner;
+
+public class Client {
+	String serverHostname = new String("127.0.0.1");
+	int port = 30000;
+	Socket socket = null;
+	PrintWriter writer = null;
+	BufferedReader in = null;
+
+	
+	public static void main(String[] args) throws IOException {
+		Client c = new Client();
+		c.start();
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Type Q to quit, E to echo and M to message all");
+		while (true) {
+			System.out.print(">");
+			String line = scan.nextLine();
+			c.sendMessage(line);
+			if(line.equals("Q")){
+				break; //we send it first so the server knows to disconnect.
+			}
+		}
+		c.disconnect();
+	}
+	public void start(){
+		try {
+			socket = new Socket(serverHostname, port);
+			InputStreamReader isr = new InputStreamReader(socket.getInputStream());
+			in = new BufferedReader(isr);
+			OutputStream os = socket.getOutputStream();
+			writer = new PrintWriter(os);
+		} catch (UnknownHostException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		new Listener().start();
+	}
+	
+	public void sendMessage(String message){
+		writer.write(message + "\r\n");
+		System.out.println("wrote " + message);
+	}
+	
+	public void disconnect(){
+	
+		try {
+			writer.close();
+			in.close();
+			socket.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.exit(1);
+		
+	}
+	class Listener extends Thread{
+		
+		public void run(){
+			while(true){
+				try{
+					String recivedLine = in.readLine();
+					System.out.println(recivedLine);
+					System.out.print(">");
+				}catch(IOException e){
+					System.out.println("Listener exception");
+					break;
+				}
+			}
+		}
+
+	}
+}

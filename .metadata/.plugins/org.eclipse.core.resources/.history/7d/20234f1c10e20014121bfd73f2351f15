@@ -1,0 +1,44 @@
+import java.io.*;
+import java.net.*;
+
+public class Client {
+	public static void main(String[] args) throws IOException {
+
+		String serverHostname = new String("127.0.0.1");
+		int port = 30000;
+		Socket socket = null;
+		PrintWriter writer = null;
+		BufferedReader in = null;
+
+		try {
+			socket = new Socket(serverHostname, port);
+			OutputStream os = socket.getOutputStream();
+			InputStreamReader isr = new InputStreamReader(socket.getInputStream());
+			in = new BufferedReader(isr);
+			writer = new PrintWriter(os);
+
+		} catch (UnknownHostException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		BufferedReader reader = new BufferedReader(new InputStreamReader(
+				System.in));
+		String line = reader.readLine();
+
+		System.out.println("Type Q to quit, E to echo and M to message all");
+		while (line != null) {
+			writer.println(line);
+			if(line.equals("Q")){
+				break; //we send it first so the server knows to disconnect.
+			}
+			System.out.println("recieved: " + in.readLine());
+		}
+
+		writer.close();
+		in.close();
+		reader.close();
+		socket.close();
+	}
+}

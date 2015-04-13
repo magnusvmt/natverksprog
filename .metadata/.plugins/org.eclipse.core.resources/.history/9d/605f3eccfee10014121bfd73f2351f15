@@ -1,0 +1,17 @@
+import java.util.ArrayList;
+
+
+public class Mailbox {
+ArrayList<String> box;
+public Mailbox(){
+	box = new ArrayList<String>();
+}
+
+public void add(String s){
+	box.add(s);
+}
+public String remove(){
+	return box.remove(0);
+}
+
+}

@@ -1,0 +1,24 @@
+import java.io.IOException;
+import java.net.ServerSocket;
+
+
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		int port = 30000;
+		try {
+			ServerSocket ss = new ServerSocket(port);
+			accept();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	public void accept(){
+		
+	}
+}
