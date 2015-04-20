@@ -1,0 +1,39 @@
+import java.util.LinkedList;
+import java.util.List;
+
+import org.jsoup.*;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
+
+
+public class Processor {
+	private List<String> links = new LinkedList<String>(); // Just a list of URLs
+	private Document htmlDocument; // This is our web page, or in other words, our document
+	
+	public void crawl(String url)
+    {
+        try
+        {
+            Connection connection = Jsoup.connect(url);
+            htmlDocument = connection.get();
+
+            System.out.println("Received web page at " + url);
+            if(!(connection.response().statusCode() == 200)){
+            	System.out.println("Not 200");
+            	break;
+            }
+            Elements linksOnPage = htmlDocument.select("a[href]");
+            System.out.println("Found (" + linksOnPage.size() + ") links");
+            for(Element link : linksOnPage)
+            {
+                this.links.add(link.absUrl("href"));
+            }
+        }
+        catch(IOException ioe)
+        {
+            // We were not successful in our HTTP request
+            System.out.println("Error in out HTTP request " + ioe);
+        }
+    }
+
+}

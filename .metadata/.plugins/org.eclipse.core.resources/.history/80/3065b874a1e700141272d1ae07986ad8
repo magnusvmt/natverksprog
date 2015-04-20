@@ -1,0 +1,76 @@
+import java.io.IOException;
+import java.net.URL;
+import java.util.LinkedList;
+import java.util.List;
+
+import org.jsoup.Connection;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
+
+public class Processor extends Thread{
+	private static final boolean DEBUG = false;
+	private List<String> links = new LinkedList<String>(); // Just a list of URLs
+	private Document htmlDocument; // This is our web page, or in other words, our document
+	private Spider spider;
+	
+	public Processor(Spider spider){
+		this.spider = spider;
+	}
+	
+	public void run(){
+		while(!spider.isDone()){
+			String nextURL = spider.nextUrl();
+			if(crawl(nextURL)){
+				addLinks();
+				spider.OnePassDone = true;
+			}
+		}
+	}
+	public boolean crawl(String url){
+        try
+        {
+            Connection connection = Jsoup.connect(url);
+            htmlDocument = connection.get();
+            if(DEBUG){
+            	System.out.println(this.getName() + "Received web page at " + url);
+            }
+            else{
+            	System.out.println(url);
+            }
+            if(!(connection.response().statusCode() == 200)){
+            	System.out.println("Not 200");
+            	return false;
+            }
+            if(!connection.response().contentType().contains("text/html")){
+                System.out.println("not html!");
+                return false;
+            }
+            Elements linksOnPage = htmlDocument.select("a[abs:href^=http]");
+            Elements emailsOnPage = htmlDocument.select("a[abs:href^=mailto:]");
+
+       
+            for(Element link : linksOnPage)
+            {
+                links.add(link.absUrl("href"));
+            }
+            return true;
+        }
+        catch(IOException e){
+        	return false;
+        }
+    }
+	
+	private void addLinks(){
+		int count = 0;
+		for(String s : links){
+			if(spider.addLink(s)){
+				count++;
+			}
+		}
+		System.out.println("added " + count + "new links");
+	}
+
+}

@@ -1,0 +1,149 @@
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentLinkedQueue;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
+public class Spider {
+	
+	private static final int MAX_PAGES = 1000;
+	private Set<String> traversedURLs;
+	private ConcurrentLinkedQueue<String> remainingURLs;
+	private HashSet<String> emails;
+	private Elements frames;
+
+	
+	
+	public Spider(String url){
+		remainingURLs = new ConcurrentLinkedQueue<String>();
+		traversedURLs = Collections.synchronizedSet(new HashSet<String>());
+		emails = new HashSet<String>();
+		remainingURLs.add(url);
+	}
+	
+
+	public synchronized String nextUrl(){
+		while(remainingURLs.isEmpty()){
+			try {
+				wait();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		String nextUrl;
+		while(true){
+			nextUrl = remainingURLs.remove(0);
+			if(!traversedURLs.contains(nextUrl)){
+				break;
+			}
+		}
+		traversedURLs.add(nextUrl);
+		return nextUrl;
+	}
+
+	public synchronized void addLinks(Collection<? extends String> c){
+		remainingURLs.addAll(c);
+		notifyAll();
+	}
+	
+	public boolean isDone(){
+		if(traversedURLs.size() < MAX_PAGES && !remainingURLs.isEmpty()){
+			System.out.println("not done yet: " + traversedURLs.size() + " are done" + remainingURLs.size() + " to go");
+			return false;
+		}
+		else{
+			return true;
+		}
+	}
+	
+	public void printResult(){
+		System.out.println("Traversed Pages:");
+		for (String s : traversedURLs){
+			System.out.println(s);
+		}
+		System.out.println("Emails:");
+		for (String s : emails){
+			System.out.println(s);
+		}
+	}
+//	public void crawlPage(URL url) {
+//		remainingURLs.add(url);
+//		traversedURLs.add(url);
+//		while (traversedURLs.size() < MAX_PAGES && remainingURLs.size() > 0) {
+//			String urlString = url.toString();
+//			Document doc = null;
+//
+//			try {
+//				doc = Jsoup.connect(urlString).get();
+//			} catch (IOException e) {
+//				System.err.println("Error: \"" + urlString + "\" not found");
+//				url = remainingURLs.poll();
+//				continue;
+//			}
+//
+//			//Elements base = doc.getElementsByTag("base");
+//			//String baseString = base.attr("href");
+//
+//			System.out.println("collectedPages size: " + traversedURLs.size());
+//			System.out.println("notVisitedpages size: "
+//					+ remainingURLs.size());
+//			System.out.println("EmailsSize: " + emails.size());
+//
+//			// String searchString = "a[abs:href^=" + urlString + "]"; // Söker
+//			// i
+//			// eda095:s
+//			// grenlänkar
+//			String searchString = "a[abs:href^=http]"; // Söker alla länkar
+//			Elements eLinks = doc.select(searchString); // selectar alla a med
+//														// href
+//														// som börjar med "http"
+//
+//			Elements eFrames = doc.select("frame[src]"); // selectar alla frame
+//															// med
+//															// attributet src
+//
+//			Elements eEmails = doc.select("a[href^=mailto:]"); // selectar alla
+//																// a
+//																// med href som
+//																// börjar med
+//																// "mailto:"
+//
+//			for (Element elink : eLinks) {
+//				String hrefLink = elink.attr("abs:href");
+//				URL newUrl;
+//					try {
+//						newUrl = new URL(hrefLink);
+//						if (!traversedURLs.contains(newUrl.toString())) {
+//							traversedURLs.add(newUrl);
+//							remainingURLs.addLast(newUrl);
+//						}
+//					} catch (MalformedURLException e) {
+//						e.printStackTrace();
+//					}
+//					
+//
+//
+//			}
+//
+//			for (Element email : eEmails) {
+//				emails.add(email.attr("href"));
+//			}
+//
+//			url = remainingURLs.poll();
+//		}
+//	}
+
+
+
+}

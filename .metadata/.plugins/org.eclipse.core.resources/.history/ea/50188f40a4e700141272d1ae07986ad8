@@ -1,0 +1,71 @@
+import java.io.IOException;
+import java.util.LinkedList;
+import java.util.List;
+
+import org.jsoup.Connection;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
+
+public class Processor extends Thread{
+	private static final boolean DEBUG = false;
+	//private List<String> links = new LinkedList<String>(); // Just a list of URLs
+	//private List<String> emails = new LinkedList<String>(); // Just a list of URLs
+	private Document htmlDocument; // This is our web page, or in other words, our document
+	private Spider spider;
+	
+	public Processor(Spider spider){
+		this.spider = spider;
+	}
+	
+	public void run(){
+		while(!spider.isDone()){
+			String nextURL = spider.nextUrl();
+			crawl(nextURL);
+		}
+	}
+	public void crawl(String url){
+        try
+        {
+            Connection connection = Jsoup.connect(url);
+            htmlDocument = connection.get();
+            if(DEBUG){
+            	System.out.println(this.getName() + "Received web page at " + url);
+            }
+            if(!(connection.response().statusCode() == 200)){
+            	System.out.println("Not 200");
+            	return;
+            }
+            if(!connection.response().contentType().contains("text/html")){
+                System.out.println("not html!");
+                return;
+            }
+            Elements linksOnPage = htmlDocument.select("a[abs:href^=http]");
+            Elements emailsOnPage = htmlDocument.select("a[abs:href^=mailto:]");
+
+            int linksAdded = 0;
+            int emailsAdded = 0;
+            for(Element link : linksOnPage)
+            {
+            	if(spider.addLink(link.absUrl("href"))){
+            		linksAdded++;
+    			}
+            }
+            for(Element mail : emailsOnPage)
+            {
+            	if(spider.addEmail(mail.absUrl("href"))){
+            		emailsAdded++;
+    			}
+            }
+            if(DEBUG){
+            	System.out.println(this.getName() + "Added " + linksAdded + " links" + " and " + emailsAdded + " emails");
+            }
+            return;
+        }
+        catch(IOException e){
+        	return;
+        }
+    }
+}

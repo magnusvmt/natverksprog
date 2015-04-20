@@ -1,0 +1,12 @@
+
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Spider spider = new Spider();
+		spider.startCrawl("http://cs.lth.se/pierre_nugues/");
+	}
+
+}

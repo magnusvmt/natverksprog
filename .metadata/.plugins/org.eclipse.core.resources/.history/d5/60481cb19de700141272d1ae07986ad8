@@ -1,0 +1,23 @@
+
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		//"http://cs.lth.se/pierre_nugues/"
+		Spider spider = new Spider("http://cs.lth.se/pierre_nugues/");
+		for(int i=0; i<10;i++){
+			Processor p = new Processor(spider);
+			try {
+				p.sleep((long) (Math.random()*1000));
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			p.start();
+			
+		}
+		spider.printResult();
+	}
+
+}

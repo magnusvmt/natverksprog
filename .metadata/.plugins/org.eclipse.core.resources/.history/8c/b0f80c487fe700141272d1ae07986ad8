@@ -1,0 +1,10 @@
+
+public class Main {
+	
+	private static final int MAX_PAGES = 1000;
+	private HashSet<URL> collectedPages;
+	private LinkedList<URL> notVisitedPages;
+	private HashSet<String> emails;
+	private Elements frames;
+
+}

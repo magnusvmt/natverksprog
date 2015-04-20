@@ -22,6 +22,7 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.browser.editor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -34,17 +35,22 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
+<part id="2"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" partName="Main.java" path="I:/!!!Skola/eda095/lab2/src/Main.java" title="Main.java" tooltip="lab2/src/Main.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab2/src/Main.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="818" selectionTopPixel="0"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Server.java" partName="Server.java" path="I:/!!!Skola/eda095/lab3/src/Server.java" title="Server.java" tooltip="lab3/src/Server.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab3/src/Server.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1161" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DownloadController.java" partName="DownloadController.java" path="I:/!!!Skola/eda095/lab2/src/DownloadController.java" title="DownloadController.java" tooltip="lab2/src/DownloadController.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab2/src/DownloadController.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1507" selectionTopPixel="252"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ClientHandler.java" partName="ClientHandler.java" path="I:/!!!Skola/eda095/lab3/src/ClientHandler.java" title="ClientHandler.java" tooltip="lab3/src/ClientHandler.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab3/src/ClientHandler.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1487" selectionTopPixel="273"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Client.java" partName="Client.java" path="I:/!!!Skola/eda095/lab3/src/Client.java" title="Client.java" tooltip="lab3/src/Client.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab3/src/Client.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1287" selectionTopPixel="573"/>
 </editor>
 </editors>
 <views>
@@ -80,6 +86,10 @@
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>&#x0A;<category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings (3 items)"/>
+<category IMemento.internal.id="Warnings"/>
+</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="548"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -256,164 +266,159 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/lab2/src/Main.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/lab2/src/RunnerOne.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/lab2/src/RunnerTwo.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/lab2/src/DownloadController.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/lab2/src/RunnerThree.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/lab2/src/RunnerRunnable.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/lab2/src/RunnerFour.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/lab2/src/RunnerFive.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/lab3/src/Server.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/lab3/src/ClientHandler.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/lab3/src/Client.java"/>
 </editors>
-<item historyLabel="RunnerTwo.java" index="2">
-<position/>
+<item historyLabel="Client.java" index="2">
+<position info="not_deleted" x="1448" y="0"/>
 </item>
-<item historyLabel="RunnerOne.java" index="1">
-<position info="not_deleted" x="293" y="74"/>
+<item historyLabel="Client.java" index="2">
+<position info="not_deleted" x="692" y="0"/>
 </item>
-<item historyLabel="Main.java" index="0">
-<position info="not_deleted" x="675" y="0"/>
+<item historyLabel="Client.java" index="2">
+<position info="not_deleted" x="1224" y="0"/>
 </item>
-<item historyLabel="Main.java" index="0">
-<position info="not_deleted" x="273" y="0"/>
+<item historyLabel="Client.java" index="2">
+<position info="not_deleted" x="1416" y="0"/>
 </item>
-<item historyLabel="Main.java" index="0">
-<position info="not_deleted" x="641" y="36"/>
+<item historyLabel="Server.java" index="0">
+<position info="not_deleted" x="624" y="0"/>
 </item>
-<item historyLabel="Main.java" index="0">
-<position info="not_deleted" x="273" y="0"/>
-</item>
-<item historyLabel="Main.java" index="0">
-<position info="not_deleted" x="426" y="39"/>
-</item>
-<item historyLabel="RunnerOne.java" index="1">
-<position info="not_deleted" x="293" y="74"/>
-</item>
-<item historyLabel="DownloadController.java" index="3">
-<position info="not_deleted" x="1507" y="0"/>
-</item>
-<item historyLabel="RunnerTwo.java" index="2">
-<position/>
-</item>
-<item historyLabel="Main.java" index="0">
-<position info="not_deleted" x="273" y="0"/>
-</item>
-<item historyLabel="RunnerTwo.java" index="2">
-<position/>
-</item>
-<item historyLabel="RunnerOne.java" index="1">
-<position info="not_deleted" x="293" y="74"/>
-</item>
-<item historyLabel="Main.java" index="0">
-<position info="not_deleted" x="273" y="0"/>
-</item>
-<item historyLabel="RunnerOne.java" index="1">
-<position info="not_deleted" x="293" y="74"/>
-</item>
-<item historyLabel="Main.java" index="0">
-<position info="not_deleted" x="273" y="0"/>
-</item>
-<item historyLabel="RunnerOne.java" index="1">
-<position info="not_deleted" x="471" y="0"/>
-</item>
-<item historyLabel="RunnerTwo.java" index="2">
-<position/>
-</item>
-<item historyLabel="RunnerTwo.java" index="2">
-<position/>
-</item>
-<item historyLabel="Main.java" index="0">
-<position info="not_deleted" x="273" y="0"/>
-</item>
-<item historyLabel="RunnerThree.java" index="4">
-<position info="not_deleted" x="1163" y="0"/>
-</item>
-<item historyLabel="RunnerOne.java" index="1">
-<position info="not_deleted" x="471" y="0"/>
-</item>
-<item historyLabel="RunnerRunnable.java" index="5">
-<position info="not_deleted" x="799" y="0"/>
-</item>
-<item historyLabel="RunnerRunnable.java" index="5">
-<position info="not_deleted" x="809" y="0"/>
-</item>
-<item historyLabel="RunnerTwo.java" index="2">
-<position/>
-</item>
-<item historyLabel="RunnerTwo.java" index="2">
-<position/>
-</item>
-<item historyLabel="RunnerOne.java" index="1">
-<position info="not_deleted" x="763" y="0"/>
-</item>
-<item historyLabel="RunnerThree.java" index="4">
-<position info="not_deleted" x="1163" y="0"/>
-</item>
-<item historyLabel="RunnerTwo.java" index="2">
-<position info="not_deleted" x="0" y="1145"/>
-</item>
-<item historyLabel="RunnerThree.java" index="4">
-<position info="not_deleted" x="177" y="0"/>
-</item>
-<item historyLabel="RunnerFour.java" index="6">
-<position info="not_deleted" x="1166" y="0"/>
-</item>
-<item historyLabel="RunnerThree.java" index="4">
-<position info="not_deleted" x="0" y="1163"/>
-</item>
-<item historyLabel="RunnerFour.java" index="6">
-<position info="not_deleted" x="181" y="0"/>
-</item>
-<item historyLabel="RunnerThree.java" index="4">
-<position info="not_deleted" x="203" y="0"/>
-</item>
-<item historyLabel="DownloadController.java" index="3">
-<position info="not_deleted" x="1507" y="0"/>
-</item>
-<item historyLabel="RunnerOne.java" index="1">
-<position info="not_deleted" x="763" y="0"/>
-</item>
-<item historyLabel="RunnerThree.java" index="4">
-<position info="not_deleted" x="1144" y="0"/>
-</item>
-<item historyLabel="Main.java" index="0">
-<position info="not_deleted" x="759" y="8"/>
-</item>
-<item historyLabel="RunnerThree.java" index="4">
-<position info="not_deleted" x="1144" y="0"/>
-</item>
-<item historyLabel="Main.java" index="0">
-<position info="not_deleted" x="759" y="8"/>
-</item>
-<item historyLabel="Main.java" index="0">
+<item historyLabel="ClientHandler.java" index="1">
 <position info="not_deleted" x="1150" y="0"/>
 </item>
-<item historyLabel="RunnerFour.java" index="6">
-<position info="not_deleted" x="181" y="0"/>
+<item historyLabel="Server.java" index="0">
+<position info="not_deleted" x="407" y="0"/>
 </item>
-<item historyLabel="Main.java" index="0">
-<position info="not_deleted" x="273" y="0"/>
+<item historyLabel="Client.java" index="2">
+<position info="not_deleted" x="1323" y="0"/>
 </item>
-<item historyLabel="RunnerFour.java" index="6">
-<position info="not_deleted" x="181" y="0"/>
+<item historyLabel="Server.java" index="0">
+<position info="not_deleted" x="407" y="0"/>
 </item>
-<item historyLabel="Main.java" index="0">
-<position info="not_deleted" x="1081" y="0"/>
+<item historyLabel="Client.java" index="2">
+<position info="not_deleted" x="1444" y="0"/>
 </item>
-<item historyLabel="RunnerFour.java" index="6">
-<position info="not_deleted" x="0" y="1166"/>
+<item historyLabel="Server.java" index="0">
+<position info="not_deleted" x="407" y="0"/>
 </item>
-<item historyLabel="RunnerFive.java" index="7">
-<position info="not_deleted" x="229" y="0"/>
+<item historyLabel="Client.java" index="2">
+<position info="not_deleted" x="1323" y="0"/>
 </item>
-<item historyLabel="RunnerFour.java" index="6">
-<position info="not_deleted" x="0" y="1166"/>
+<item historyLabel="ClientHandler.java" index="1">
+<position info="not_deleted" x="1150" y="0"/>
 </item>
-<item historyLabel="RunnerFive.java" index="7">
-<position info="not_deleted" x="229" y="0"/>
+<item historyLabel="Server.java" index="0">
+<position info="not_deleted" x="1549" y="0"/>
 </item>
-<item active="true" historyLabel="Main.java" index="0">
-<position info="not_deleted" x="1081" y="0"/>
+<item historyLabel="ClientHandler.java" index="1">
+<position info="not_deleted" x="1336" y="0"/>
+</item>
+<item historyLabel="Server.java" index="0">
+<position info="not_deleted" x="1549" y="0"/>
+</item>
+<item historyLabel="Client.java" index="2">
+<position info="not_deleted" x="1323" y="0"/>
+</item>
+<item historyLabel="Server.java" index="0">
+<position info="not_deleted" x="971" y="0"/>
+</item>
+<item historyLabel="ClientHandler.java" index="1">
+<position info="not_deleted" x="989" y="0"/>
+</item>
+<item historyLabel="Server.java" index="0">
+<position info="not_deleted" x="411" y="0"/>
+</item>
+<item historyLabel="Client.java" index="2">
+<position info="not_deleted" x="1576" y="0"/>
+</item>
+<item historyLabel="ClientHandler.java" index="1">
+<position info="not_deleted" x="989" y="0"/>
+</item>
+<item historyLabel="Client.java" index="2">
+<position info="not_deleted" x="570" y="0"/>
+</item>
+<item historyLabel="Server.java" index="0">
+<position info="not_deleted" x="411" y="0"/>
+</item>
+<item historyLabel="Client.java" index="2">
+<position/>
+</item>
+<item historyLabel="ClientHandler.java" index="1">
+<position info="not_deleted" x="954" y="35"/>
+</item>
+<item historyLabel="ClientHandler.java" index="1">
+<position info="not_deleted" x="1559" y="0"/>
+</item>
+<item historyLabel="Server.java" index="0">
+<position info="not_deleted" x="411" y="0"/>
+</item>
+<item historyLabel="Client.java" index="2">
+<position/>
+</item>
+<item historyLabel="Server.java" index="0">
+<position info="not_deleted" x="411" y="0"/>
+</item>
+<item historyLabel="Client.java" index="2">
+<position/>
+</item>
+<item historyLabel="Client.java" index="2">
+<position info="not_deleted" x="1524" y="0"/>
+</item>
+<item historyLabel="Server.java" index="0">
+<position info="not_deleted" x="750" y="0"/>
+</item>
+<item historyLabel="ClientHandler.java" index="1">
+<position info="not_deleted" x="207" y="0"/>
+</item>
+<item historyLabel="Server.java" index="0">
+<position info="not_deleted" x="1113" y="0"/>
+</item>
+<item historyLabel="Client.java" index="2">
+<position info="not_deleted" x="1352" y="0"/>
+</item>
+<item historyLabel="ClientHandler.java" index="1">
+<position info="not_deleted" x="207" y="0"/>
+</item>
+<item historyLabel="Client.java" index="2">
+<position info="not_deleted" x="1352" y="0"/>
+</item>
+<item historyLabel="ClientHandler.java" index="1">
+<position info="not_deleted" x="2060" y="0"/>
+</item>
+<item historyLabel="Server.java" index="0">
+<position info="not_deleted" x="1113" y="0"/>
+</item>
+<item historyLabel="Client.java" index="2">
+<position info="not_deleted" x="1352" y="0"/>
+</item>
+<item historyLabel="ClientHandler.java" index="1">
+<position info="not_deleted" x="1487" y="0"/>
+</item>
+<item historyLabel="Server.java" index="0">
+<position info="not_deleted" x="393" y="0"/>
+</item>
+<item historyLabel="Client.java" index="2">
+<position info="not_deleted" x="1287" y="0"/>
+</item>
+<item historyLabel="ClientHandler.java" index="1">
+<position info="not_deleted" x="1487" y="0"/>
+</item>
+<item historyLabel="Server.java" index="0">
+<position info="not_deleted" x="393" y="0"/>
+</item>
+<item historyLabel="Server.java" index="0">
+<position info="not_deleted" x="1642" y="0"/>
+</item>
+<item historyLabel="Server.java" index="0">
+<position/>
+</item>
+<item historyLabel="ClientHandler.java" index="1">
+<position info="not_deleted" x="1487" y="0"/>
+</item>
+<item active="true" historyLabel="Server.java" index="0">
+<position/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -433,29 +438,47 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Client.java" tooltip="lab3/src/Client.java">
+<persistable path="/lab3/src/Client.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ConnectedClient.java" tooltip="lab3/src/ConnectedClient.java">
+<persistable path="/lab3/src/ConnectedClient.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ClientHandler.java" tooltip="lab3/src/ClientHandler.java">
+<persistable path="/lab3/src/ClientHandler.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Server.java" tooltip="lab3/src/Server.java">
+<persistable path="/lab3/src/Server.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="InfinitePrinter.java" tooltip="lab3/src/InfinitePrinter.java">
+<persistable path="/lab3/src/InfinitePrinter.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ThreadExperiment2.java" tooltip="lab3/src/ThreadExperiment2.java">
+<persistable path="/lab3/src/ThreadExperiment2.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ThreadExperiment.java" tooltip="lab3/src/ThreadExperiment.java">
+<persistable path="/lab3/src/ThreadExperiment.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Mainbox.java" tooltip="lab3/src/Mainbox.java">
+<persistable path="/lab3/src/Mainbox.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="threadExperiment.java" tooltip="lab3/src/threadExperiment.java">
+<persistable path="/lab3/src/threadExperiment.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EchoServer2.java" tooltip="lab3/src/EchoServer2.java">
+<persistable path="/lab3/src/EchoServer2.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EchoTCP1.java" tooltip="lab3/src/EchoTCP1.java">
+<persistable path="/lab3/src/EchoTCP1.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" tooltip="lab3/src/Main.java">
+<persistable path="/lab3/src/Main.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RunnerFive.java" tooltip="lab2/src/RunnerFive.java">
 <persistable path="/lab2/src/RunnerFive.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RunnerFour.java" tooltip="lab2/src/RunnerFour.java">
 <persistable path="/lab2/src/RunnerFour.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RunnerTwo.java" tooltip="lab2/src/RunnerTwo.java">
-<persistable path="/lab2/src/RunnerTwo.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RunnerThree.java" tooltip="lab2/src/RunnerThree.java">
-<persistable path="/lab2/src/RunnerThree.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DownloadController.java" tooltip="lab2/src/DownloadController.java">
-<persistable path="/lab2/src/DownloadController.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Runner.java" tooltip="lab2/src/Runner.java">
-<persistable path="/lab2/src/Runner.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" tooltip="lab2/src/Main.java">
-<persistable path="/lab2/src/Main.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" tooltip="lab1/src/Main.java">
-<persistable path="/lab1/src/Main.java"/>
 </file>
 </mruList>
 </workbench>

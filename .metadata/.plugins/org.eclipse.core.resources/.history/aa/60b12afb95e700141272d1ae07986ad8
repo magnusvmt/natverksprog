@@ -1,0 +1,62 @@
+import java.io.IOException;
+import java.net.URL;
+import java.util.LinkedList;
+import java.util.List;
+
+import org.jsoup.Connection;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
+
+public class Processor extends Thread{
+	private List<String> links = new LinkedList<String>(); // Just a list of URLs
+	private Document htmlDocument; // This is our web page, or in other words, our document
+	private Spider spider;
+	
+	public Processor(Spider spider){
+		this.spider = spider;
+	}
+	
+	public void startCrawl(){
+		while(!spider.isDone()){
+			String nextURL = spider.nextUrl();
+			if(crawl(nextURL)){
+				spider.addLinks(links);
+			}
+		}
+	}
+	
+	public boolean crawl(String url){
+        try
+        {
+            Connection connection = Jsoup.connect(url);
+            htmlDocument = connection.get();
+
+            System.out.println("Received web page at " + url);
+            if(!(connection.response().statusCode() == 200)){
+            	System.out.println("Not 200");
+            	return false;
+            }
+            if(!connection.response().contentType().contains("text/html")){
+                System.out.println("not html!");
+                return false;
+            }
+            Elements linksOnPage = htmlDocument.select("a[abs:href^=http]");
+            Elements emailsOnPage = htmlDocument.select("a[href^=mailto:]");
+
+            System.out.println("Found (" + linksOnPage.size() + ") links");
+            for(Element link : linksOnPage)
+            {
+                links.add(link.absUrl("href"));
+            }
+            return true;
+        }
+        catch(IOException e){
+        	e.printStackTrace();
+        	return false;
+        }
+    }
+
+}
