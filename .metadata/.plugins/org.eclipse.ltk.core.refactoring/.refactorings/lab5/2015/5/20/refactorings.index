@@ -1,0 +1,14 @@
+1431379084820	Rename type 'TaskOne'
+1431379671756	Copy compilation unit
+1431379896827	Rename local variable 'machine'
+1431380203374	Rename local variable 'req'
+1431380216922	Rename local variable 'res'
+1431380342860	Copy compilation unit
+1431380646151	Rename local variable 'req'
+1431380662637	Rename local variable 'packetRecieved'
+1431380855663	Rename method 'readToken'
+1431380863441	Rename method 'readToken'
+1431381417151	Rename local variable 'socket'
+1431381440773	Rename local variable 'socket'
+1431381759505	Copy compilation unit
+1431382564709	Rename local variable 'mSocket'

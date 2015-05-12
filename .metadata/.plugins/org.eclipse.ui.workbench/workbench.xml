@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="33" version="2.0">
+<workbench progressCount="34" version="2.0">
 <workbenchAdvisor/>
-<window height="1017" maximized="true" width="1675" x="288" y="45">
+<window height="919" maximized="true" width="1675" x="198" y="61">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -22,6 +22,7 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.browser.editor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
@@ -36,25 +37,37 @@
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
+<part id="3"/>
+<part id="4"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Server.java" partName="Server.java" path="I:/!!!Skola/eda095/lab3/src/Server.java" title="Server.java" tooltip="lab3/src/Server.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab3/src/Server.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1161" selectionTopPixel="0"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SendUDP2.java" partName="SendUDP2.java" path="I:/!!!Skola/eda095/lab5/src/SendUDP2.java" title="SendUDP2.java" tooltip="lab5/src/SendUDP2.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab5/src/SendUDP2.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1139" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ClientHandler.java" partName="ClientHandler.java" path="I:/!!!Skola/eda095/lab3/src/ClientHandler.java" title="ClientHandler.java" tooltip="lab3/src/ClientHandler.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab3/src/ClientHandler.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1487" selectionTopPixel="273"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MCReader.java" partName="MCReader.java" path="I:/!!!Skola/eda095/lab5/src/MCReader.java" title="MCReader.java" tooltip="lab5/src/MCReader.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab5/src/MCReader.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="321" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Client.java" partName="Client.java" path="I:/!!!Skola/eda095/lab3/src/Client.java" title="Client.java" tooltip="lab3/src/Client.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab3/src/Client.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1287" selectionTopPixel="573"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MCServerOffer.java" partName="MCServerOffer.java" path="I:/!!!Skola/eda095/lab5/src/MCServerOffer.java" title="MCServerOffer.java" tooltip="lab5/src/MCServerOffer.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab5/src/MCServerOffer.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="5" selectionOffset="229" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MCTimeService.java" partName="MCTimeService.java" path="I:/!!!Skola/eda095/lab5/src/MCTimeService.java" title="MCTimeService.java" tooltip="lab5/src/MCTimeService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab5/src/MCTimeService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="131" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TimeServiceUDP.java" partName="TimeServiceUDP.java" path="I:/!!!Skola/eda095/lab5/src/TimeServiceUDP.java" title="TimeServiceUDP.java" tooltip="lab5/src/TimeServiceUDP.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab5/src/TimeServiceUDP.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="331" selectionTopPixel="48"/>
 </editor>
 </editors>
 <views>
-<view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
+<view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc">
+<viewState/>
+</view>
 <view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
 <viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="">
 <customFilters userDefinedPatternsEnabled="false">
@@ -86,8 +99,8 @@
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>&#x0A;<category IMemento.internal.id="Errors"/>
-<category IMemento.internal.id="Warnings (3 items)"/>
+<expanded>
+<category IMemento.internal.id="Errors"/>
 <category IMemento.internal.id="Warnings"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="548"/>
@@ -101,7 +114,9 @@
 <view id="org.eclipse.ui.console.ConsoleView" partName="Console">
 <viewState/>
 </view>
-<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
+<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration">
+<viewState/>
+</view>
 <view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
 <viewState/>
 </view>
@@ -266,159 +281,163 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/lab3/src/Server.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/lab3/src/ClientHandler.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/lab3/src/Client.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/lab5/src/SendUDP2.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/lab5/src/MCReader.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/lab5/src/MCSender.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/lab5/src/MCServerOffer.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/lab5/src/TimeServiceUDP.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/lab5/src/MCTimeService.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/lab5/src/TimeService2.java"/>
 </editors>
-<item historyLabel="Client.java" index="2">
-<position info="not_deleted" x="1448" y="0"/>
+<item historyLabel="MCReader.java" index="1">
+<position info="not_deleted" x="321" y="0"/>
 </item>
-<item historyLabel="Client.java" index="2">
-<position info="not_deleted" x="692" y="0"/>
+<item historyLabel="MCSender.java" index="2">
+<position info="not_deleted" x="484" y="0"/>
 </item>
-<item historyLabel="Client.java" index="2">
-<position info="not_deleted" x="1224" y="0"/>
+<item historyLabel="MCReader.java" index="1">
+<position info="not_deleted" x="321" y="0"/>
 </item>
-<item historyLabel="Client.java" index="2">
-<position info="not_deleted" x="1416" y="0"/>
+<item historyLabel="MCSender.java" index="2">
+<position info="not_deleted" x="484" y="0"/>
 </item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="624" y="0"/>
+<item historyLabel="MCReader.java" index="1">
+<position info="not_deleted" x="321" y="0"/>
 </item>
-<item historyLabel="ClientHandler.java" index="1">
-<position info="not_deleted" x="1150" y="0"/>
-</item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="407" y="0"/>
-</item>
-<item historyLabel="Client.java" index="2">
-<position info="not_deleted" x="1323" y="0"/>
-</item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="407" y="0"/>
-</item>
-<item historyLabel="Client.java" index="2">
-<position info="not_deleted" x="1444" y="0"/>
-</item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="407" y="0"/>
-</item>
-<item historyLabel="Client.java" index="2">
-<position info="not_deleted" x="1323" y="0"/>
-</item>
-<item historyLabel="ClientHandler.java" index="1">
-<position info="not_deleted" x="1150" y="0"/>
-</item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="1549" y="0"/>
-</item>
-<item historyLabel="ClientHandler.java" index="1">
-<position info="not_deleted" x="1336" y="0"/>
-</item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="1549" y="0"/>
-</item>
-<item historyLabel="Client.java" index="2">
-<position info="not_deleted" x="1323" y="0"/>
-</item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="971" y="0"/>
-</item>
-<item historyLabel="ClientHandler.java" index="1">
-<position info="not_deleted" x="989" y="0"/>
-</item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="411" y="0"/>
-</item>
-<item historyLabel="Client.java" index="2">
-<position info="not_deleted" x="1576" y="0"/>
-</item>
-<item historyLabel="ClientHandler.java" index="1">
-<position info="not_deleted" x="989" y="0"/>
-</item>
-<item historyLabel="Client.java" index="2">
-<position info="not_deleted" x="570" y="0"/>
-</item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="411" y="0"/>
-</item>
-<item historyLabel="Client.java" index="2">
+<item historyLabel="SendUDP2.java" index="0">
 <position/>
 </item>
-<item historyLabel="ClientHandler.java" index="1">
-<position info="not_deleted" x="954" y="35"/>
+<item historyLabel="SendUDP2.java" index="0">
+<position info="not_deleted" x="1447" y="0"/>
 </item>
-<item historyLabel="ClientHandler.java" index="1">
-<position info="not_deleted" x="1559" y="0"/>
+<item historyLabel="SendUDP2.java" index="0">
+<position info="not_deleted" x="1440" y="0"/>
 </item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="411" y="0"/>
+<item historyLabel="SendUDP2.java" index="0">
+<position info="not_deleted" x="316" y="0"/>
 </item>
-<item historyLabel="Client.java" index="2">
+<item historyLabel="MCServerOffer.java" index="3">
+<position info="not_deleted" x="1031" y="0"/>
+</item>
+<item historyLabel="SendUDP2.java" index="0">
+<position info="not_deleted" x="316" y="0"/>
+</item>
+<item historyLabel="TimeServiceUDP.java" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="SendUDP2.java" index="0">
+<position info="not_deleted" x="316" y="0"/>
+</item>
+<item historyLabel="MCTimeService.java" index="5">
 <position/>
 </item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="411" y="0"/>
+<item historyLabel="TimeServiceUDP.java" index="4">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Client.java" index="2">
+<item historyLabel="TimeService2.java" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="TimeServiceUDP.java" index="4">
+<position info="not_deleted" x="1182" y="0"/>
+</item>
+<item historyLabel="MCTimeService.java" index="5">
 <position/>
 </item>
-<item historyLabel="Client.java" index="2">
-<position info="not_deleted" x="1524" y="0"/>
+<item historyLabel="MCServerOffer.java" index="3">
+<position info="not_deleted" x="86" y="0"/>
 </item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="750" y="0"/>
-</item>
-<item historyLabel="ClientHandler.java" index="1">
-<position info="not_deleted" x="207" y="0"/>
-</item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="1113" y="0"/>
-</item>
-<item historyLabel="Client.java" index="2">
-<position info="not_deleted" x="1352" y="0"/>
-</item>
-<item historyLabel="ClientHandler.java" index="1">
-<position info="not_deleted" x="207" y="0"/>
-</item>
-<item historyLabel="Client.java" index="2">
-<position info="not_deleted" x="1352" y="0"/>
-</item>
-<item historyLabel="ClientHandler.java" index="1">
-<position info="not_deleted" x="2060" y="0"/>
-</item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="1113" y="0"/>
-</item>
-<item historyLabel="Client.java" index="2">
-<position info="not_deleted" x="1352" y="0"/>
-</item>
-<item historyLabel="ClientHandler.java" index="1">
-<position info="not_deleted" x="1487" y="0"/>
-</item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="393" y="0"/>
-</item>
-<item historyLabel="Client.java" index="2">
-<position info="not_deleted" x="1287" y="0"/>
-</item>
-<item historyLabel="ClientHandler.java" index="1">
-<position info="not_deleted" x="1487" y="0"/>
-</item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="393" y="0"/>
-</item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="1642" y="0"/>
-</item>
-<item historyLabel="Server.java" index="0">
+<item historyLabel="MCTimeService.java" index="5">
 <position/>
 </item>
-<item historyLabel="ClientHandler.java" index="1">
-<position info="not_deleted" x="1487" y="0"/>
+<item historyLabel="TimeServiceUDP.java" index="4">
+<position info="not_deleted" x="246" y="1647"/>
 </item>
-<item active="true" historyLabel="Server.java" index="0">
+<item historyLabel="MCTimeService.java" index="5">
+<position info="not_deleted" x="336" y="0"/>
+</item>
+<item historyLabel="TimeServiceUDP.java" index="4">
+<position info="not_deleted" x="246" y="1647"/>
+</item>
+<item historyLabel="MCTimeService.java" index="5">
+<position info="not_deleted" x="1741" y="0"/>
+</item>
+<item historyLabel="SendUDP2.java" index="0">
+<position info="not_deleted" x="916" y="0"/>
+</item>
+<item historyLabel="MCServerOffer.java" index="3">
+<position info="not_deleted" x="229" y="5"/>
+</item>
+<item historyLabel="MCTimeService.java" index="5">
+<position info="not_deleted" x="1741" y="0"/>
+</item>
+<item historyLabel="SendUDP2.java" index="0">
+<position info="not_deleted" x="961" y="0"/>
+</item>
+<item historyLabel="MCReader.java" index="1">
+<position info="not_deleted" x="321" y="0"/>
+</item>
+<item historyLabel="MCServerOffer.java" index="3">
+<position info="not_deleted" x="229" y="5"/>
+</item>
+<item historyLabel="MCTimeService.java" index="5">
+<position info="not_deleted" x="1741" y="0"/>
+</item>
+<item historyLabel="MCServerOffer.java" index="3">
+<position info="not_deleted" x="229" y="5"/>
+</item>
+<item historyLabel="SendUDP2.java" index="0">
+<position info="not_deleted" x="1176" y="3"/>
+</item>
+<item historyLabel="MCServerOffer.java" index="3">
+<position info="not_deleted" x="953" y="0"/>
+</item>
+<item historyLabel="SendUDP2.java" index="0">
+<position info="not_deleted" x="1176" y="3"/>
+</item>
+<item historyLabel="MCTimeService.java" index="5">
 <position/>
+</item>
+<item historyLabel="MCServerOffer.java" index="3">
+<position info="not_deleted" x="953" y="0"/>
+</item>
+<item historyLabel="MCTimeService.java" index="5">
+<position info="not_deleted" x="131" y="0"/>
+</item>
+<item historyLabel="TimeServiceUDP.java" index="4">
+<position info="not_deleted" x="331" y="0"/>
+</item>
+<item historyLabel="SendUDP2.java" index="0">
+<position info="not_deleted" x="1176" y="3"/>
+</item>
+<item historyLabel="MCTimeService.java" index="5">
+<position info="not_deleted" x="634" y="0"/>
+</item>
+<item historyLabel="MCServerOffer.java" index="3">
+<position info="not_deleted" x="786" y="0"/>
+</item>
+<item historyLabel="SendUDP2.java" index="0">
+<position info="not_deleted" x="1176" y="3"/>
+</item>
+<item historyLabel="SendUDP2.java" index="0">
+<position info="not_deleted" x="916" y="0"/>
+</item>
+<item historyLabel="MCTimeService.java" index="5">
+<position info="not_deleted" x="634" y="0"/>
+</item>
+<item historyLabel="MCServerOffer.java" index="3">
+<position info="not_deleted" x="229" y="5"/>
+</item>
+<item historyLabel="MCTimeService.java" index="5">
+<position info="not_deleted" x="213" y="0"/>
+</item>
+<item historyLabel="SendUDP2.java" index="0">
+<position info="not_deleted" x="1276" y="0"/>
+</item>
+<item historyLabel="MCTimeService.java" index="5">
+<position info="not_deleted" x="131" y="0"/>
+</item>
+<item active="true" historyLabel="SendUDP2.java" index="0">
+<position info="not_deleted" x="1276" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -438,41 +457,44 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Client.java" tooltip="lab3/src/Client.java">
-<persistable path="/lab3/src/Client.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TimeService2.java" tooltip="lab5/src/TimeService2.java">
+<persistable path="/lab5/src/TimeService2.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ConnectedClient.java" tooltip="lab3/src/ConnectedClient.java">
-<persistable path="/lab3/src/ConnectedClient.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TimeServiceUDP.java" tooltip="lab5/src/TimeServiceUDP.java">
+<persistable path="/lab5/src/TimeServiceUDP.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ClientHandler.java" tooltip="lab3/src/ClientHandler.java">
-<persistable path="/lab3/src/ClientHandler.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MCTimeService.java" tooltip="lab5/src/MCTimeService.java">
+<persistable path="/lab5/src/MCTimeService.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Server.java" tooltip="lab3/src/Server.java">
-<persistable path="/lab3/src/Server.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MCServerOffer.java" tooltip="lab5/src/MCServerOffer.java">
+<persistable path="/lab5/src/MCServerOffer.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="InfinitePrinter.java" tooltip="lab3/src/InfinitePrinter.java">
-<persistable path="/lab3/src/InfinitePrinter.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MCSender.java" tooltip="lab5/src/MCSender.java">
+<persistable path="/lab5/src/MCSender.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ThreadExperiment2.java" tooltip="lab3/src/ThreadExperiment2.java">
-<persistable path="/lab3/src/ThreadExperiment2.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MCReader.java" tooltip="lab5/src/MCReader.java">
+<persistable path="/lab5/src/MCReader.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SendUDP2.java" tooltip="lab5/src/SendUDP2.java">
+<persistable path="/lab5/src/SendUDP2.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SendUDP.java" tooltip="lab5/src/SendUDP.java">
+<persistable path="/lab5/src/SendUDP.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TimeService1.java" tooltip="lab5/src/TimeService1.java">
+<persistable path="/lab5/src/TimeService1.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TaskOne.java" tooltip="lab5/src/TaskOne.java">
+<persistable path="/lab5/src/TaskOne.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ThreadExperiment.java" tooltip="lab3/src/ThreadExperiment.java">
 <persistable path="/lab3/src/ThreadExperiment.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Mainbox.java" tooltip="lab3/src/Mainbox.java">
-<persistable path="/lab3/src/Mainbox.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DownloadController.java" tooltip="lab2/src/DownloadController.java">
+<persistable path="/lab2/src/DownloadController.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="threadExperiment.java" tooltip="lab3/src/threadExperiment.java">
-<persistable path="/lab3/src/threadExperiment.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EchoServer2.java" tooltip="lab3/src/EchoServer2.java">
-<persistable path="/lab3/src/EchoServer2.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EchoTCP1.java" tooltip="lab3/src/EchoTCP1.java">
-<persistable path="/lab3/src/EchoTCP1.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" tooltip="lab3/src/Main.java">
-<persistable path="/lab3/src/Main.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" tooltip="lab2/src/Main.java">
+<persistable path="/lab2/src/Main.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RunnerFive.java" tooltip="lab2/src/RunnerFive.java">
 <persistable path="/lab2/src/RunnerFive.java"/>

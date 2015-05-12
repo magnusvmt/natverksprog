@@ -1,0 +1,28 @@
+import java.net.*;
+import java.io.*;
+
+public class MCServerOffer extends Thread {
+
+	public void run() {
+		MulticastSocket mSocket;
+		try {
+			mSocket = new MulticastSocket(30002);
+			InetAddress ia = InetAddress.getByName("230.230.230.230");
+			mSocket.joinGroup(ia);
+			while (true) {
+				DatagramPacket req = new DatagramPacket(new byte[1024], 0, 1024);
+				mSocket.receive(req);
+				String s = new String(req.getData());
+				s = s.substring(0, req.getLength());
+				String resString = InetAddress.getLocalHost().getHostName();
+				DatagramPacket res = new DatagramPacket(resString.getBytes(),
+						resString.getBytes().length, req.getAddress(),
+						req.getPort());
+				mSocket.send(res);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

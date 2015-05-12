@@ -1,0 +1,49 @@
+import java.io.IOException;
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.Locale;
+
+public class TimeService1 {
+
+	public TimeService1() {
+
+	}
+
+	public static Locale getLocale(String text) {
+		if (text.equals("english")) {
+			return Locale.ENGLISH;
+		} else if (text.equals("german")) {
+			return Locale.GERMAN;
+		} else if (text.equals("french")) {
+			return Locale.FRENCH;
+		} else {
+			return Locale.getDefault();
+		}
+	}
+
+	public static void main(String[] args) throws IOException {
+		DateFormat df = null;
+		switch (readToken()) {
+		case "date":
+			df = DateFormat.getDateInstance(DateFormat.FULL,
+					getLocale(args[2]));
+			break;
+		case "time":
+			df = DateFormat.getTimeInstance(DateFormat.FULL,
+					getLocale(args[2]));
+			break;
+		default:
+			System.out.println("invalid input");
+		}
+		System.out.println(df.format(new Date()));
+	}
+
+	public static String readToken() throws IOException{
+		StringBuilder sb = new StringBuilder();
+		char c;
+		while(!Character.isWhitespace(c=(char)System.in.read())){
+			sb.append(c);
+		}
+		return sb.toString();
+	}
+}

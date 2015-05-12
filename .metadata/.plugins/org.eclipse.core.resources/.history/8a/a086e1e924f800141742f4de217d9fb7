@@ -1,0 +1,26 @@
+import java.io.IOException;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
+import java.net.SocketException;
+import java.net.UnknownHostException;
+import java.util.Scanner;
+
+public class SendUDP {
+	public static void main(String[] args) throws IOException{
+		InetAddress machine = InetAddress.getByName(args[0]);
+		int port = Integer.parseInt(args[1]);
+		String s = "";
+		for(int i=2;i<args.length;i++){
+			s += args[i] + " ";
+		}
+		System.out.println(s);
+		DatagramSocket socket = new DatagramSocket(port);
+		DatagramPacket req = new DatagramPacket(s.getBytes(),s.getBytes().length, machine, port-1);
+		DatagramPacket res = new DatagramPacket(new byte[1024],0,1024);
+		socket.send(req);
+		socket.receive(res);
+		String response = new String(res.getData());
+		System.out.println("Svar: " + response);
+	}
+}

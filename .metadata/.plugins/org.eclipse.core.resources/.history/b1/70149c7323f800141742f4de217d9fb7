@@ -1,0 +1,60 @@
+	package lab5;
+	import java.text.DateFormat;
+	import java.util.Date;
+	import java.util.Locale;
+public class TimeService1 {
+	
+
+
+
+
+		public TimeService1() {
+
+		}
+
+		public static Locale getLocale(String text) {
+			if (text.equals("e")) {
+				return Locale.ENGLISH;
+			} else if (text.equals("g")) {
+				return Locale.GERMAN;
+			} else if (text.equals("f")) {
+				return Locale.FRENCH;
+			} else if (text.equals("c")) {
+				return Locale.CHINESE;
+			} else {
+				return Locale.getDefault();
+			}
+		}
+
+		public static int getDateFormat(String text){
+			if (text.equals("s")) {
+				return DateFormat.SHORT;
+			} else if (text.equals("m")) {
+				return DateFormat.MEDIUM;
+			} else if (text.equals("l")) {
+				return DateFormat.LONG;
+			} else if (text.equals("f")) {
+				return DateFormat.FULL;
+			} else {
+				return DateFormat.DEFAULT;
+			}
+		}
+		
+		public static void main(String[] args) {
+			DateFormat df = null;
+				switch (args[0]) {
+				case "date":
+					df = DateFormat.getDateInstance(getDateFormat(args[1]), getLocale(args[2]));
+					break;
+				case "time":
+					df = DateFormat.getTimeInstance(getDateFormat(args[1]), getLocale(args[2]));
+					break;
+				case "datetime":
+					df = DateFormat.getDateTimeInstance(getDateFormat(args[1]),getDateFormat(args[2]), getLocale(args[3]));
+					break;
+				default:
+				}
+			System.out.println(df.format(new Date()));
+		}
+
+}

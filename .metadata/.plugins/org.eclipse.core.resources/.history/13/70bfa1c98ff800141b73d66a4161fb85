@@ -1,0 +1,40 @@
+import java.io.IOException;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
+import java.net.MulticastSocket;
+
+public class SendUDP2 {
+	public static void main(String[] args) throws IOException{
+		InetAddress serverIP = InetAddress.getByName(discoverServer());
+		
+		
+		int port = Integer.parseInt(args[0]);
+		String s = "";
+		for(int i = 1; i < args.length; i++){
+			s += args[i] + " ";
+		}
+		DatagramSocket clientSocket = new DatagramSocket();
+		DatagramPacket request = new DatagramPacket(s.getBytes(),s.getBytes().length, serverIP, port);
+		DatagramPacket response = new DatagramPacket(new byte[1024],0,1024);
+		clientSocket.send(request);
+		clientSocket.receive(response);
+		String responseString = new String(response.getData());
+		System.out.println("Response: " + responseString);
+	}
+	
+	public static String discoverServer() throws IOException{
+		MulticastSocket ms = new MulticastSocket(30001);
+		ms.setTimeToLive(1);
+		InetAddress ia = InetAddress.getByName("224.0.0.1");
+		String query = "whoareyou";
+		DatagramPacket request = new DatagramPacket(query.getBytes(),
+				query.getBytes().length, ia, 333333);
+		ms.send(request);
+		DatagramPacket response = new DatagramPacket(new byte[1024], 0, 1024);
+		ms.receive(response);
+		String serverName = new String(response.getData());
+		return serverName;
+	}
+	
+}
